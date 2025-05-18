@@ -31,7 +31,3 @@ function createExecutorCommands(InitialArray = []) {
         getArray: () => [...struct]
     };
 }
-
-let executor = createExecutorCommands([1, 2, 3, 4, 5]);
-executor.execute("push 10");
-executor.execute("print");
