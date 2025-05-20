@@ -1,20 +1,24 @@
-### 🧰 Array Command Executor
+# Task Manager Module
 
-A simple JavaScript function factory that creates an executor for common array operations based on string commands.  
-This lets you manipulate an internal array by passing textual commands like "push 10" or "pop" dynamically.
+A lightweight JavaScript utility for managing tasks with priority tracking and completion status.
 
-### 🚀 Features
+## Features
 
-- ⚙️ Supports fundamental array methods: `push`, `pop`, `shift`, `unshift`, `reverse`, and a custom `remove` by value.  
-- 📝 Parses command strings and executes corresponding array operations.  
-- 🔒 Maintains internal state encapsulated within the factory.  
-- 🖨️ Prints the current array state as a comma-separated string.  
-- 📋 Returns a copy of the internal array on request.
+- **Task Tracking**: Manage tasks with descriptions, completion status, and priority levels
+- **Priority Management**: Identify high-priority tasks (priority 1)
+- **Completion Tracking**: Filter and count tasks by completion status
+- **Immutable Operations**: Safe data transformations without side effects
 
-### 💻 Usage
+## Installation
 
-```js
-const executor = createExecutorCommands([1, 2, 3]);
-executor.execute("push 10");   // Adds 10 to the array
-executor.execute("pop");       // Removes last element
-executor.execute("print");     // Logs the array: "1,2,10"
+### Hhow to use
+
+```javascriptconsole.log("Completed tasks:", taskManager.getCompletedTasks());
+console.log("Pending tasks count:", taskManager.countPendingTasks());
+console.log("Task with ID 3:", taskManager.findTaskById(3));
+console.log("Has high priority task?", taskManager.hasHighPriorityTask());
+console.log("Are all tasks completed?", taskManager.areAllTasksCompleted());
+console.log("Uppercase descriptions:", taskManager.updateDescriptions());
+console.log("Mark task 2 as completed:", taskManager.markAsCompleted(2));
+console.log("Tasks grouped by priority:", taskManager.groupByPriority());
+console.log("Task statistics:", taskManager.getTaskStatistics());
